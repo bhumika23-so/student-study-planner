@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="planner-container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>📚 Student Study Planner</h1>
+      <p class="subtitle">Plan your study sessions, organize by priority, and track your progress.</p>
+    </header>
+
+    <!-- Task Counters / Stats -->
+    <section class="stats-section">
+      <div class="stat-card pending">
+        <span class="stat-label">Pending</span>
+        <span id="pending-count" class="stat-number">0</span>
+      </div>
+      <div class="stat-card completed">
+        <span class="stat-label">Completed</span>
+        <span id="completed-count" class="stat-number">0</span>
+      </div>
+      <div class="stat-card total">
+        <span class="stat-label">Total</span>
+        <span id="total-count" class="stat-number">0</span>
+      </div>
+    </section>
+
+    <!-- Task Entry Form -->
+    <form id="task-form" class="task-form">
+      <div class="input-group">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Enter a study task (e.g., Read Biology Chapter 3)"
+          autocomplete="off"
+          required
+        >
+      </div>
+      <div class="controls-group">
+        <select id="priority-select" aria-label="Task Priority">
+          <option value="High">High Priority</option>
+          <option value="Medium" selected>Medium Priority</option>
+          <option value="Low">Low Priority</option>
+        </select>
+        <button type="submit" id="add-btn" class="btn btn-primary">Add Task</button>
+      </div>
+    </form>
+
+    <!-- Task List -->
+    <section class="task-list-section">
+      <div class="section-header">
+        <h2>Study Tasks</h2>
+      </div>
+
+      <ul id="task-list" class="task-list">
+        <!-- Tasks will be rendered here dynamically -->
+      </ul>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">📝</div>
+        <p>No study tasks yet.</p>
+        <span>Add your first task above to start organizing your study goals!</span>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
