@@ -57,15 +57,44 @@
         <h2>Study Tasks</h2>
       </div>
 
+      <!-- Filter & Search Toolbar -->
+      <div class="filter-bar">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="🔍 Search study tasks..."
+            autocomplete="off"
+            aria-label="Search study tasks"
+          >
+        </div>
+        <div class="priority-filter-container">
+          <select id="priority-filter" class="filter-select" aria-label="Filter by priority">
+            <option value="All" selected>All</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+      </div>
+
       <ul id="task-list" class="task-list">
         <!-- Tasks will be rendered here dynamically -->
       </ul>
 
-      <!-- Empty State -->
+      <!-- Empty State (No tasks created yet) -->
       <div id="empty-state" class="empty-state">
         <div class="empty-icon">📝</div>
         <p>No study tasks yet.</p>
         <span>Add your first task above to start organizing your study goals!</span>
+      </div>
+
+      <!-- No Matching Search Results State -->
+      <div id="no-search-results" class="empty-state">
+        <div class="empty-icon">🔍</div>
+        <p>No matching tasks found</p>
+        <span>Try searching with different keywords.</span>
       </div>
     </section>
   </div>
