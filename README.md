@@ -43,7 +43,7 @@ student-study-planner/
 
 🎯 Purpose
 
-This project was created as a practice project to learn and apply the basics of HTML, CSS, JavaScript, GitHub, and web deployment.
+This project was created as a practice project to learn and apply the basics of HTML, CSS, JavaScript, GitHub, and web deployment using vibe coding.
 
 📌 Future Improvements
 
